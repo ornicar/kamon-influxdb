@@ -29,4 +29,7 @@ crossScalaVersions := Seq("2.11.12", "2.12.7", "2.13.1")
 
 scalaVersion := "2.13.1"
 
+publishTo := Some(Resolver.file("file", new File(sys.props.getOrElse("publishTo", ""))))
+
+
 resolvers += Resolver.bintrayRepo("kamon-io", "releases")
